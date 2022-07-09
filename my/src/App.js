@@ -6,14 +6,14 @@ import {useState} from 'react'
 
 function App() {
 
-  const [userlist , setuserlist] = useState([]);
+  const [userslist , setuserlist] = useState([]);
 
   const adduserhandler = (uname , uage) =>
   {
     //  console.log(`${uname} ${uage}`)
-     setuserlist((prevuserlist) =>
+     setuserlist((prevuserslist) =>
      {
-       return [...prevuserlist,{name : uname , age : uage , id : Math.random().toString()}];
+       return [...prevuserslist,{name : uname , age : uage , id : Math.random().toString()}];
      })
   }
 
@@ -22,7 +22,7 @@ function App() {
   return (<>
      <div>
       <Addusers onadduser = {adduserhandler}/>
-      <Userlist users ={userlist}/>
+      <Userlist users ={userslist}/>
      </div>
   </> 
   )

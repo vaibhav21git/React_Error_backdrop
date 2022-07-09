@@ -13,8 +13,12 @@ function Addusers(props) {
 
     function adduserhandler(event) {
 
+        // console.log('button clicked')
         event.preventDefault();
-        if(user.trim().length === 0 || age.trim.length === 0)
+        console.log(user.trim().length)
+        console.log(age.trim.length)
+
+        if(user.trim().length === 0 || age.trim().length === 0)
         {
             return ;
         }
@@ -23,7 +27,9 @@ function Addusers(props) {
         {
             return ;
         }
-
+        
+        // console.log(user);
+        // console.log(age);
         props.onadduser(user,age);
         setuser('');
         setage('');
