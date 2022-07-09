@@ -5,7 +5,7 @@ import Button from '../UI/Button';
 import { useState } from 'react'
 
 
-function Addusers() {
+function Addusers(props) {
 
     const [user, setuser] = useState('');
     const [age, setage] = useState('');
@@ -13,6 +13,7 @@ function Addusers() {
 
     function adduserhandler(event) {
 
+        event.preventDefault();
         if(user.trim().length === 0 || age.trim.length === 0)
         {
             return ;
@@ -23,7 +24,7 @@ function Addusers() {
             return ;
         }
 
-        event.preventDefault();
+        props.onadduser(user,age);
         setuser('');
         setage('');
     }
