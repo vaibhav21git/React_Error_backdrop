@@ -12,9 +12,20 @@ function Addusers() {
 
 
     function adduserhandler(event) {
+
+        if(user.trim().length === 0 || age.trim.length === 0)
+        {
+            return ;
+        }
+
+        if(+age <1)
+        {
+            return ;
+        }
+
         event.preventDefault();
-        // console.log(user);
-        // console.log(age);
+        setuser('');
+        setage('');
     }
 
     function userchangehandler(event) {
@@ -25,7 +36,7 @@ function Addusers() {
         setage(event.target.value);
      }
 
-    // here oue card component is a custom component it do not
+    // here our card component is a custom component it do not
     // have a method of className in it unlike div,p,form
 
 
@@ -33,9 +44,9 @@ function Addusers() {
         <Card className={classes.input}>
             <form onSubmit={adduserhandler}>
                 <label htmlFor="username" >Username</label>
-                <input onChange ={userchangehandler} id="username" type="text" />
+                <input value = {user} onChange ={userchangehandler} id="username" type="text" />
                 <label htmlFor="age" >Age (Years)</label>
-                <input  onChange ={agechangehandler} id="age" type="number" />
+                <input value = {age} onChange ={agechangehandler} id="age" type="number" />
                 <Button type="submit">Add User</Button>
             </form>
         </Card>
