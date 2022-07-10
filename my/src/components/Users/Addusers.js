@@ -18,7 +18,7 @@ function Addusers(props) {
         // console.log('button clicked')
         event.preventDefault();
         console.log(user.trim().length)
-        console.log(age.trim.length)
+        console.log(age.trim().length)
 
         if(user.trim().length === 0 || age.trim().length === 0)
         {
