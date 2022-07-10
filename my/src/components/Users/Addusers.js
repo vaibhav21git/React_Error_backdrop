@@ -33,7 +33,7 @@ function Addusers(props) {
         {
             seterror({
                 title : 'Invalid age',
-                message : 'please enyer a valid age greater than zero' 
+                message : 'please enter a valid age greater than zero' 
            })
             return ;
         }
